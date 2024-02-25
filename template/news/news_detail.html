@@ -1,0 +1,10 @@
+<h2>{{ detail_context.title }}</h2>
+<div>
+    <img src="{{ detail_context.image.url }} "  width="330" alt="img">
+    <p>{{ detail_context.body | linebreaks }}</p>
+</div>
+
+<div class="card-footer text-center">
+    <a   href="{% url 'news_update' detail_context.id %}"><button  class="btn btn-orange">Tahrirlash </button></a>
+    <a    href="{% url 'news_delete' detail_context.id %}"><button  class="btn btn-green">O'chirish</button></a>
+</div>

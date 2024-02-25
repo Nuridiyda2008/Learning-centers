@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> All news list</h1>
+<a   href="{% url 'news_create'  %}"><button  class="btn btn-orange">Yangilik qo'shish </button></a>
+{% for x in news_list %}
+<p><a href="{% url 'news_detail_page' x.id %}">{{x.title}}</a></p>
+<p><a href="{% url 'news_detail_page' x.id %}"><img src="{{ x.image.url }}" width="330" alt="img">{{ x.}}</a></p>
+<p>{{ x.body }}</p>
+
+{% endfor %}
+</body>
+</html>
